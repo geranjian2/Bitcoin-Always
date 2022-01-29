@@ -27,7 +27,7 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
+              "src/bitcoin.ico",
               "src/assets"
             ],
             "styles": [
@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "Bitcoin-Always"
+  "defaultProject": "Bitcoin-Always",
+  "cli": {
+    "analytics": "5dcf9037-04f9-4d8e-9e47-0406dcc1f100"
+  }
 }

@@ -1,13 +1,17 @@
 {
   "name": "bitcoin-always",
   "version": "1.0.0",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start:electron": "ng build --base-href ./ && electron . --no-sandbox",
+    "winpackage": "electron-packager . DemoApp --platform=win32 --arch=x64 --overwrite --app-version=1.0.0 --build-version=1.0.0 --win32metadata.ProductName=DemoApp --FileDescription=DemoApp --appname=demoapp --win32metadata.CompanyName=ng --app-copyright=ng --icon=bitcoin.ico",
+    "archiveapp": "asar pack DemoApp-win32-x64/resources/app DemoApp-win32-x64/resources/app.asar"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +34,9 @@
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "electron": "^16.0.8",
+    "electron-packager": "^15.4.0",
+    "electron-positioner": "^4.1.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.1.0",
