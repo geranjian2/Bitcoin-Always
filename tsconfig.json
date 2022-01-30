@@ -3,6 +3,14 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@environments/*": ["src/environments/*"],
+      "@ccomponents/*": ["src/app/core/components/*"],
+      "@services/*": ["src/app/core/services/*"],
+      "@models/*": ["src/app/core/models/*"],
+      "@helpers/*": ["src/app/core/_helpers/*"],
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -11,6 +19,7 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
@@ -19,7 +28,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/@angular",
+      "node_modules/@angular/common/http"
+    ],
+    "types": [
+      "node",
+    ],
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
