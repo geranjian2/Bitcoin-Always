@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { crypto } from '@models/crypto';
-@Injectable()
-export class TransformDataCrypto<T> {
+@Injectable({
+  providedIn: 'root'
+})
+export class TransformDataCrypto {
   constructor() {}
-  newArrayCrypto(array: object, keyvalues: Array<string>): T[] {
-    const keys = Object.keys(array);
-    const values = Object.values(array);
+  newArrayCrypto(data: object, keyvalues: Array<string>): any {
+    const keys = Object.keys(data);
+    const values = Object.values(data);
     const arrayNew = keys.map((value, i) => {
       const valueNew: any = {};
       valueNew[keyvalues[0]] = value;

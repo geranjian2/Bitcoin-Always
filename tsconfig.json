@@ -6,10 +6,11 @@
     "paths": {
       "@src/*": ["src/*"],
       "@environments/*": ["src/environments/*"],
-      "@ccomponents/*": ["src/app/core/components/*"],
       "@services/*": ["src/app/core/services/*"],
       "@models/*": ["src/app/core/models/*"],
       "@helpers/*": ["src/app/core/_helpers/*"],
+      "@modules/*": ["src/app/modules/*"],
+      "@components/*": ["src/app/shared/components/*"],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

@@ -13,7 +13,7 @@ const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 400,
-    maxWidth: 400,
+    // maxWidth: 400,
     minWidth: 400,
     height: height,
     x: width-430, // default position left
@@ -28,7 +28,7 @@ const createWindow = () => {
     symbolColor: '#74b1be'
   }
 })
-    mainWindow.loadURL("http://browserify.org") 
+    mainWindow.loadURL("http://browserify.org")
     mainWindow.setBackgroundColor('#1E183A')
 
   // and load the index.html of the app.
