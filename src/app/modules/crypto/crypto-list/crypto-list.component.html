@@ -1,0 +1,18 @@
+<app-preload-overlay *ngIf="viewPreload"></app-preload-overlay>
+<div class="card">
+  <div class="div-table" id="scroll-bar" *ngIf="listCrypto.length>0">
+    <div class="title"><h2>Listado de Bitcoin</h2> <img src="/assets/img/bitcoin.ico" alt=""></div>
+    <div class="table">
+      <div class="tr">
+        <div class="td">Ver</div>
+        <div class="td">Fecha</div>
+        <div class="td">Precio</div>
+      </div>
+      <div class="tr pointer" *ngFor="let crypto of listCrypto">
+        <div class="td"><div (click)="viewDetail(crypto)"><i class="far fa-eye"></i><b> Ver Detalle</b></div></div>
+        <div class="td"><i class="far fa-calendar-alt"></i> {{crypto.date}}</div>
+        <div class="td"><i class="fas fa-dollar-sign"></i> {{crypto.price}}</div>
+      </div>
+    </div>
+  </div>
+</div>

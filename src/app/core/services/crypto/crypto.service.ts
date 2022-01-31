@@ -6,7 +6,6 @@ import { Observable, throwError } from 'rxjs';
 import { crypto } from '@models/crypto';
 import { environment } from '@src/environments/environment';
 import { ResponseDetail, ResponseHistory } from '@models/response';
-import { TransformDataCrypto } from '@helpers/transform-data-crypto.class';
 
 
 @Injectable({
@@ -40,6 +39,7 @@ export class CryptoService {
       return this.httpClient.get<ResponseDetail>(
         `${this.uriCryptocompare}data/pricehistorical?fsym=${crypto}&tsyms=${typeCurrency}&ts=${timestamp}`).pipe(
           map(response => {
+            console.log(this.newArrayCrypto(response.BTC,['currency','price']));
             return this.newArrayCrypto(response.BTC,['currency','price']);
           }),
           catchError(err => {
