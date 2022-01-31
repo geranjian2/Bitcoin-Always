@@ -1,0 +1,42 @@
+$border:#08d6c5;
+$stripe:#dddddd;
+
+.table {
+  display: table;
+  width: 100%;
+  border-radius: 2em;
+  // border-collapse: collapse;
+  .tr {
+    display: table-row;
+    border: 1px solid $border;
+    transition: all 0.35s;
+    &:hover {
+      background-color: $stripe;
+    }
+    &:first-child {
+      font-weight:bold;
+      border-bottom:2px solid $border;
+    }
+    .td {
+      transition: all 0.35s;
+      display: table-cell;
+      padding: 8px;
+      &:hover {
+        height: 2em!important;
+      }
+      &:first-child {
+        border-left:0;
+      }
+    }
+  }
+}
+
+.div-table, .table-tag {
+  height: 90vh;
+  overflow-y: scroll;
+  .title {
+    text-align:center;
+    padding-bottom:.5em;
+    color: #322D4C;
+  }
+}

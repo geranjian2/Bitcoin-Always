@@ -1,0 +1,40 @@
+
+  .wrap-detail-crypto{
+    height: 100vh;
+  }
+  .card-crypto-detail{
+    -webkit-box-shadow: -4px -1px 17px -1px rgba(0,0,0,0.45);
+    box-shadow: -4px -1px 17px -1px rgba(0,0,0,0.45);
+    border-radius: 1em;
+    position: relative;
+    transition: all 0.35s;
+    &:hover{
+      transform: scale(.9);
+    }
+    .cont-title-currency{
+      position: absolute;
+      width: 60%;
+      height: 3em;
+      background-color: orange;
+      top: 0;
+      text-align: center;
+      color: white;
+    }
+    h3{
+      color: rgb(18, 17, 29);
+      span{
+        color: orange;
+      }
+    }
+  }
+
+  @media(max-width:576px) {
+    .wrap-detail-crypto{
+      display: initial!important;
+      .card-crypto-detail{
+        margin-top: 1em;
+        text-align: center;
+      }
+    }
+}
+

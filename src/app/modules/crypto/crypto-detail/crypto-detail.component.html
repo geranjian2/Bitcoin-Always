@@ -1,0 +1,12 @@
+<div class="mt-5 ml-2 white pointer" (click)="rollback()">
+  <i class="fas fa-arrow-left"></i> Volver
+</div>
+<div class="wrap-detail-crypto d-flex justify-content-around align-items-center">
+  <div class="card card-crypto-detail" *ngFor="let crypto of cryptoList">
+    <div class="cont-title-currency" >
+      <h5>{{crypto.currency}}</h5>
+    </div>
+    <p>Dolar</p>
+    <h3><span>$</span> {{crypto.price}}</h3>
+  </div>
+</div>
