@@ -5,11 +5,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --optimization true --aot true --extractCss true --base-href / --stats-json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:electron": "ng build --base-href ./ && electron . --no-sandbox",
+    "start:electron": "ng build --optimization true --aot true --extractCss true --base-href ./ --stats-json  && electron . --no-sandbox",
     "winpackage": "electron-packager . DemoApp --platform=win32 --arch=x64 --overwrite --app-version=1.0.0 --build-version=1.0.0 --win32metadata.ProductName=DemoApp --FileDescription=DemoApp --appname=demoapp --win32metadata.CompanyName=ng --app-copyright=ng --icon=bitcoin.ico",
     "archiveapp": "asar pack DemoApp-win32-x64/resources/app DemoApp-win32-x64/resources/app.asar"
   },
